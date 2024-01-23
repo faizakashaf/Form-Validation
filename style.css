@@ -7,7 +7,7 @@
 body{
     min-height: 100vh;
    width: 100%;
-    background-color: #dec178;
+    background-color: #d8bf80;
 }
 .container{
  /* border: 1px solid blue; */
@@ -50,12 +50,12 @@ flex: 1.5;
   margin-top: 4px;
  
 }
-.input-control input{
+.input-control .input {
     flex: 2;
     border-radius: 4px;
     margin: 4px 0;
     padding:4px 8px;
-    border: 0;
+    border: none; 
     outline: 0;
     font-size: 14px;
     font-weight: 700;
@@ -77,16 +77,39 @@ flex: 1.5;
     font-size: 14px;
     font-weight: 600;
     font-style: italic;
-    color: #de0a26;
+    color: #f10d2c;
 
   }
 #formSubmit{
-    padding: 4px 10px;
-    font-size: 15px;
+    padding: 4px 15px;
+    font-size: 20px;
     margin: 10px auto;
     color:#ffff;
     font-weight: 700;
     border: none;
     border-radius: 4px;
     background-color: #ad34ad;
+}
+.input-control .red{
+    border: 1.5px solid #f10d2c ; 
+    flex: 2;
+    border-radius: 4px;
+    margin: 4px 0;
+    padding:4px 8px;
+    outline: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color:#000000 ;
+ 
+}
+.input-control .green{
+    border: 1.5px solid #008000; 
+    flex: 2;
+    border-radius: 4px;
+    margin: 4px 0;
+    padding:4px 8px;
+    outline: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color:#000000 ;
 }
