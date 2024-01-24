@@ -5,7 +5,30 @@ const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirmPass");
+const passEyeButton = document.querySelector(".eyeicon");
+const confirmPassEyeButton = document.querySelector(".confirmEyeicon");
 
+
+//eye button toggle (image change hide and view)
+const eyeicon = (input,eyeimg) =>{
+    if(input.type === "password"){
+        input.type = "text";
+        eyeimg.src = "./assets/open.png";
+    }
+    else{
+        input.type = "password";
+        eyeimg.src = "./assets/close.png";
+    }
+}
+
+passEyeButton.addEventListener("click",() =>{
+    eyeicon(password,passEyeButton);
+});
+confirmPassEyeButton.addEventListener("click",()=>{
+    eyeicon(confirmPassword,confirmPassEyeButton);
+});
+
+//password toggle ended here
 
 form.addEventListener("submit", (e) => {
 e.preventDefault()
@@ -144,6 +167,7 @@ function isPassword(passwordValue,cpassValue){
     const passwordPattern = /^(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-])(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
     return passwordPattern.test(passwordValue,cpassValue);
 }
+
 
 
 
